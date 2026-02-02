@@ -84,7 +84,21 @@ while True:
       print(f"Current balance: ₹{balance:.2f}")
 
     elif choice == "5":
-        print("Receipt selected")
+       print("\n------ SESSION RECEIPT ------")
+
+       print(f"Total deposits: {deposit_count}")
+       print(f"Total withdrawals: {withdraw_count}")
+       print(f"Final balance: ₹{balance:.2f}")
+
+       print("\nTransactions:")
+       if not transactions:
+         print("No transactions made.")
+       else:
+         for t in transactions:
+            print(t)
+
+       print("\nThank you for using Smart ATM ")
+
 
     elif choice == "6":
         print("Thank you for using Smart ATM ")
