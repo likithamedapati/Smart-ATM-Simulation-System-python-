@@ -49,7 +49,24 @@ while True:
 
 
     elif choice == "2":
-        print("Withdraw selected")
+      try:
+        amount = float(input("Enter amount to withdraw: "))
+
+        if amount <= 0:
+            print("Invalid amount.")
+
+        elif amount > balance:
+            print("Insufficient balance.")
+
+        else:
+            balance -= amount
+            withdraw_count += 1
+            transactions.append(f"Withdraw: ₹{amount}")
+            print(f"₹{amount} withdrawn successfully!")
+
+      except:
+        print("Invalid input.")
+
 
     elif choice == "3":
         print("Check Balance selected")
