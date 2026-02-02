@@ -66,10 +66,8 @@ while True:
 
       except:
         print("Invalid input.")
-
-
     elif choice == "3":
-        print("Check Balance selected")
+        print(f"Current balance: ₹{balance:.2f}")
 
     elif choice == "4":
         print("Transaction History selected")
