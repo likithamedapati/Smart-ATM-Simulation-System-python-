@@ -70,7 +70,18 @@ while True:
         print(f"Current balance: ₹{balance:.2f}")
 
     elif choice == "4":
-        print("Transaction History selected")
+      
+      print("\n--- Transaction History ---")
+
+      if not transactions:
+        print("No transactions yet.")
+      else:
+        for t in transactions:
+            print(t)
+
+      print(f"\nTotal deposits: {deposit_count}")
+      print(f"Total withdrawals: {withdraw_count}")
+      print(f"Current balance: ₹{balance:.2f}")
 
     elif choice == "5":
         print("Receipt selected")
