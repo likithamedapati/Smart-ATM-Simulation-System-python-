@@ -33,7 +33,20 @@ while True:
     choice = input("Choose an option: ")
 
     if choice == "1":
-        print("Deposit selected")
+      try:
+        amount = float(input("Enter amount to deposit: "))
+
+        if amount <= 0:
+            print("Invalid amount.")
+        else:
+            balance += amount
+            deposit_count += 1
+            transactions.append(f"Deposit: ₹{amount}")
+            print(f"₹{amount} deposited successfully!")
+
+      except:
+        print("Invalid input.")
+
 
     elif choice == "2":
         print("Withdraw selected")
